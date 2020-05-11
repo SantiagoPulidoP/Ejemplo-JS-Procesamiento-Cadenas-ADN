@@ -7,7 +7,7 @@ var cantidad;
 var save = e =>{
     var proteina = document.getElementById("proteinas").value;
     proteina = proteina.trim();
-    if(cantCadenas<5 && proteina!=""){
+    if(cantCadenas<20 && proteina!="" && proteina.length===1){
         document.querySelector("#monitor").style.display = "block";
         arrayProteinas.push(proteina.toUpperCase())
         cantCadenas+=1;
@@ -17,7 +17,7 @@ var save = e =>{
 
 
         
-    }else if(cantCadenas===5){
+    }else if(cantCadenas===20){
         document.querySelector("#error").innerHTML = "Se ha alcanzado el maximo de 20 proteinas";
         document.querySelector("#enviar").disabled = true;
     }
